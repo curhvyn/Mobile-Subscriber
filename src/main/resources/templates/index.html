@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mobile Subscriber Management System</title>
+
+  <link th:href="@{/img/favicon.png}" rel="icon" />
+  <link th:href="@{/img/apple-touch-icon.png}" rel="icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+  <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+
+
+  <!--  Main CSS File -->
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center justify-content-between">
+
+    <div class="d-flex align-items-center w-50  justify-content-between">
+      <a href="/" class="logo d-flex w-100 align-items-center">
+
+        <img th:src="@{/img/logo.png}"/>
+        <h6 class="mb-0"> Mobile Subscriber Management System</h6>
+      </a>
+    </div><!-- End Logo -->
+    <div class="me-3">
+      <a  th:href = "@{/showNewSubscriberForm}" class="btn btn-primary btn-sm"> Add Subscriber </a>
+      <a th:href = "@{/list_subscribers}" class="btn btn-primary btn-sm "> List All Subscribers </a>
+    </div>
+
+
+  </header><!-- End Header -->
+
+
+
+  <main id="main" class="main d-flex flex-column ">
+
+    <div class=" w-75" style="margin: 0 auto">
+      <div class="pagetitle">
+        <h1>Dashboard</h1>
+
+      </div><!-- End Page Title -->
+
+      <section style="margin: 0 auto" class="section dashboard me-auto ">
+        <div class="row">
+
+          <!-- Post-Paid Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card postPaid-card">
+              <div class="card-body">
+                <h3 class="card-title">Total Post-Paid Subscribers</h3>
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-cart"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h1 th:text="${postPaid}"></h1>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- Post-Paid Card -->
+
+          <!-- Pre-Paid Card -->
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card prePaid-card">
+
+              <div class="card-body">
+                <h3 class="card-title">Total Pre-Paid Subscibers </h3>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                  </div>
+                  <div class="ps-3">
+                    <h1 th:text="${prePaid}"></h1>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- End Pre-Paid Card -->
+
+          <!-- SUbscribers Card -->
+          <div class="col-xxl-4 col-xl-12">
+
+            <div class="card info-card subscribers-card">
+
+              <div class="card-body">
+                <h3 class="card-title">Total Subscribers </h3>
+
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-people"></i>
+
+                  </div>
+                  <div class="ps-3">
+                    <h1 th:text="${total}"></h1>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div><!-- End Customers Card -->
+
+      </section>
+    </div>
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Michael Alabi</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by Michael Alabi
+    </div>
+  </footer><!-- End Footer -->
+</body>
+</html>
